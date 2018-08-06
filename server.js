@@ -2,6 +2,8 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.PORT || 3000;
+
 //Botstrap the express framwork.
 let app = express();
 
@@ -52,9 +54,11 @@ app.get('/about', (req, res)=>{
 });
 
 //Setup port to listen for
-app.listen(3000, ()=>{
-    console.log('Server is running');
+app.listen(port, ()=>{
+    console.log(`Server is running on port: ${port}`);
 });
+
+
 
 
 //Setup Middleware to serve contents of public directory.
