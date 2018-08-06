@@ -33,9 +33,9 @@ app.use((req, res, next )=>{
     next();
 });
 
-app.use((req, res, next)=>{ 
+//app.use((req, res, next)=>{ 
     //res.render('maintenance.hbs',{});
-});
+//});
 
 //Create response and route for home
 app.get('/', (req, res)=>{   
@@ -52,6 +52,15 @@ app.get('/about', (req, res)=>{
         pageTitle: "About Page",
     });
 });
+
+//Create response and route for contact page
+app.get('/contact', (req, res)=>{
+    //Ideal for view engine
+    res.render("contact.hbs", {
+        pageTitle: "Contact Page",
+    });
+});
+
 
 //Setup port to listen for
 app.listen(port, ()=>{
