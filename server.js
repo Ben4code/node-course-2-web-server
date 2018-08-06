@@ -34,7 +34,7 @@ app.use((req, res, next )=>{
 });
 
 app.use((req, res, next)=>{ 
-    res.render('maintenance.hbs',{});
+    //res.render('maintenance.hbs',{});
 });
 
 //Create response and route for home
